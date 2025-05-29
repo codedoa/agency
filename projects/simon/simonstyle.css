@@ -1,0 +1,141 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+  min-width: 300px;
+}
+
+.homebutton {
+  position: fixed;
+  margin: 5px;
+  top: 100px;
+  background-image: url("../../home-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 75px;
+  height: 75px;
+  opacity: 0.5;
+  z-index: 100001;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  margin: 3%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  margin: auto;
+  height: 575px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.startgame {
+  max-width: 50%;
+  background-image: url("./images/simon-game-card.png");
+}
+
+.goodgame {
+  max-width: 60%;
+  background-image: url("./images/capybara-cool.jpg");
+  background-position: center;
+  background-size: 100%;
+  border: 2px solid black;
+  border-radius: 30%;
+  box-shadow: 0 0 10px white;
+}
+
+.endgame {
+  max-width: 60%;
+  background-image: url("./images/squirrox.gif");
+  background-position: center;
+  background-size: 100%;
+  border: 2px solid black;
+  border-radius: 30%;
+  box-shadow: 0 0 10px white;
+}
+
+.controlbtn {
+  display: block;
+  width: 100%;
+  background-color: inherit;
+  font-family: 'Press Start 2P', strong;
+  font-size: 2rem;
+  color: #FEF2BF;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 3px green;
+}
+
+#start:before {
+  font-size: 3rem;
+  content: '\261e';
+  padding-right: 12px;
+  color: green;
+  text-shadow: 3px 3px 3px green;
+}
+
+#start:after {
+  font-size: 3rem;
+  content: '\261c';
+  padding-left: 3px;
+  color: green;
+  text-shadow: 3px 3px 3px green;
+}
+
+#restart:before {
+  font-size: 3rem;
+  line-height: 3rem;
+  content: '\267d';
+  padding-right: 12px;
+  opacity: 0.6;
+}
+
+#restart:after {
+  font-size: 3rem;
+  line-height: 3rem;
+  content: '\267d';
+  padding-left: 3px;
+  opacity: 0.6;
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.btnhdn {
+  opacity: 0%;
+  display: none;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 10px white;
+  background-color: grey;
+}

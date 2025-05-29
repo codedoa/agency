@@ -1,0 +1,438 @@
+body {
+  width: 100%;
+  font-family: "Jersey 10", Poppins, sans-serif;
+  margin: 0;
+  background-color: #faf9f6;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(180deg,
+    #FEBE8C, #FFFBC1, #FEBE8C, #FFFBC1, #FEBE8C
+  );
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+}
+
+.logo {
+  flex: 1;
+  padding: 10px;
+  width: 20% !important;
+}
+
+p {
+  text-align: justify;
+  padding: 0px 10px 10px 10px;
+  margin: 0;
+}
+
+header > p {
+  flex: 1;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  flex: 1;
+  font-size: 2rem;
+  margin: 0px 0px 10px 0px;
+  padding: 0;
+  display: block;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 50% 50% 5% 5%;
+}
+
+.card-title {
+  margin: 0;
+  padding: 10px !important;
+  padding-bottom: 0px !important;
+}
+
+.bb {
+  color: midnightblue;  
+}
+
+.bb::after {
+  content: "!";
+}
+
+.card {
+  display: inline-block;
+  margin: 0px 0px 10px 0px;
+  border: 0.1rem ridge #B6E2A1;
+  border-radius: 5%;
+  font-size: 1rem;
+  p {
+    padding: 0px 10px 0px 10px;
+    font-family: Poppins,sans-serif;
+    font-stretch: condensed;
+    font-stretch: 100%;
+  }
+}
+
+.tile-image {
+  margin: 0px 10px;
+  max-width: 50%;
+  float: left;
+  border: 0.05rem solid black;
+  border-radius: 10%;
+}
+
+.right img {
+  float: right;
+}
+
+footer p {
+  padding-right: 0px;
+  text-align: right;
+  color: midnightblue;
+  font-size: 1.1rem;
+}
+
+.drumkit-components {
+  padding: 0 20px;
+  font-family: Poppins; 
+  font-weight: normal; 
+  font-size: x-small; 
+  list-style: inside; 
+}
+
+@media (max-width: 576px) {
+  body {
+    min-width: 300px;
+    background: linear-gradient(0deg,
+      #F7A4A4,#F7A4A4
+    );  
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    font-size: 2.3rem;
+    max-height: 300px;
+    background: linear-gradient(to bottom,
+      transparent,#B6E2A1 50%,#F7A4A4 60%, transparent
+    );
+  }
+
+  .logo {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background: radial-gradient(
+      #B6E2A1 50%,#F7A4A4 60%, transparent 75%
+    );
+    border-radius: 50% 50% 50% 0%;
+    border: 0.2rem solid #B6E2A1 !important;
+    border-left-style: none !important;
+  }
+
+  header > p {
+    flex: 1;
+    margin: 10px;
+    padding: 15px 10px 0px 10px;
+    background: radial-gradient(
+      #B6E2A1 50%,#F7A4A4 60%, transparent 75%
+    );
+    border: 0.2rem solid #B6E2A1;
+    border-radius: 50% 50% 0% 50%;
+    border-bottom-style: solid;
+    border-right-style: none;
+    text-align: center;
+    font-size: 1.05em;
+  }
+
+  h1 {
+    margin: -11px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    background: linear-gradient(0deg,
+     #F7A4A4 10%, #B6E2A1 45%, #F7A4A4 80%, transparent
+    );
+    border-radius: 0% 0% 50% 50%;
+    border: 0.2rem solid #B6E2A1;
+    border-top-style: hidden;
+    font-size: 1.5rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(
+      #B6E2A1 35%, #F7A4A4 90%
+    );
+    max-width: 100%;
+    border: 0.2rem solid #B6E2A1;
+  }
+
+  .tile-image {
+    margin: 10px 10px 0px 10px;
+    max-width: 100%;
+    border-radius: 3%;
+  }
+
+  .card-title {
+    margin: 0px 0px 5px 0px;
+    padding: 0px 10px 0px 10px;
+    font-size: 2rem;
+  }
+
+  h2::before {
+    padding-right: 10px;
+    content: '\294F';
+  }
+
+  h2::after {
+    padding-left: 10px;
+    content: '\2951';
+  }
+
+  .card p {
+    margin: 0;
+    padding: 0px 10px 10px 10px;
+    object-fit: contain;
+  }
+
+  footer {
+    flex: 1;
+    min-width: 330px;
+    position: sticky;
+    bottom: 0;
+    padding-right: 10px;
+    background: linear-gradient(0deg,
+      #B6E2A1 20%,#F7A4A4 80%
+    );
+    border: 0.2rem solid #B6E2A1;
+    border-radius: 50% 50% 0% 0%;
+    p {
+      padding: 5px 0px 0px 0px;
+    }
+    p::before {
+      content: url('./favicon.png');
+      padding-right: 10px;
+    }
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  body {
+    margin: 0;
+    background: linear-gradient(180deg,
+     #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
+    );
+    .card {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    footer {
+      margin-right: 15px;
+    }
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0px;
+    background: linear-gradient(180deg,
+      #FFC090,#7FB77E, #B1D7B4, #B1D7B4, #B1D7B4, #7FB77E,#FFC090
+    );
+    border-bottom: 0.1rem solid #7FB77E;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+
+  .logo {
+    flex: 1;
+    max-width: 180px;
+    min-width: 180px;
+    background: radial-gradient(at 50% 50%,
+      #7FB77E 40%, #B1D7B4, transparent 70%
+    );
+    border-radius: 5% 0% 0% 0%;
+    border: 0 !important;
+  }
+  
+  header>p {
+    flex: 1;
+    margin: 0;
+    padding: 40px 20px 0px 20px;
+    background: linear-gradient(180deg,
+      #FFC090, #7FB77E, #B1D7B4, #B1D7B4, #B1D7B4,#7FB77E, #FFC090
+    );
+    display: inline;
+    border: 0;
+    border-bottom-right-radius: 25%;
+    font-size: 2.2rem;
+    text-align: end;
+    text-transform: uppercase;
+  }
+  
+  h1 {
+    margin: -10px 0px 10px 0px;
+    padding: 10px;
+    padding-top: 20px;
+    background: linear-gradient(180deg,
+      #FFC090 50%, #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
+    );
+    border-radius: 0%;
+    border-bottom: 0.1rem solid #7FB77E;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h2::after {
+    content: '\269f';
+    padding-left: 10px; 
+  }
+
+  .bb {
+    display: block;
+  }
+
+  .card {
+    margin: 0px 10px 10px 0px;
+    padding: 0px 0px 10px 0px;
+    background: radial-gradient(at 50% 45%,
+      #B1D7B4, #F7F6DC, #FFC090
+    );
+    img {
+      max-width: 48%;
+      margin: 10px 10px 0px 10px;
+      border-color: #7FB77E;
+      border-radius: 0;
+    }
+    p::before {
+      content: '\274f';
+      padding-right: 10px;
+    }
+    border-radius: 0;
+  }
+
+  div.card.right {
+    h2 {
+      text-align: right;
+    }
+    h2::before {
+      content: '\269e';
+      padding-right: 10px; 
+    }
+    h2::after {
+      content: none;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    margin: 0;
+    width: 100%;
+    background: repeating-linear-gradient(180deg,
+      #FEBE8C, #F3FDE8, #FEBE8C, #F3FDE8, #FEBE8C, #F3FDE8,#FEBE8C,#B1D7B4, #B1D7B4, #FEBE8C
+    );
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 100px;
+    gap: 10px;
+    row-gap: 0px;
+    padding: 0px 10px 0px 10px;
+  }
+
+  header {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+  }
+
+  .logo {
+    flex: 1;
+    object-fit: contain;
+    background: radial-gradient(at 100% 100%,
+      #A8DF8E 40%, #FFE5E5, transparent 70%
+    );
+  }
+  
+  header > p {
+    flex: 1;
+    padding-left: 4rem;
+    background: radial-gradient(at 0% 100%,
+      #A8DF8E 40%, #FFE5E5, transparent 70%
+    );
+    border-top-right-radius: 5%;
+    font-size: 3.8rem;
+  }
+
+  h1 {
+    grid-column: span 2;
+    margin-bottom: 25px;
+    padding: 15px 320px 15px 15px;
+    background: radial-gradient(at 50% 0%,
+      #A8DF8E 40%, #FFE5E5, transparent 70%
+    );
+    border-radius: 0% 0% 5% 5%;
+    border-right-style: none;
+    border-bottom: 0.2rem solid #FFBFBF;
+    text-transform: lowercase;
+    text-align: end;
+    text-decoration-color: midnightblue;
+    text-decoration-thickness: 0.05rem;
+    text-decoration-line: overline;
+  }
+
+  h1::after {
+    content: '\00a0\2710\00a0';
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h2::after {
+    content: '\2767';
+    padding-left: 10px; 
+  }
+
+  .card {
+    padding-bottom: 10px;
+    border-color: #FFBFBF;
+    background: radial-gradient(
+     #FFE5E5 50%, #A8DF8E
+    );
+    img {
+      margin-top: 10px;
+    }
+  }
+
+  .right img {
+    float: left;
+  }
+
+  footer {
+    margin-right: 10px;
+  }
+
+  @media (min-width: 1200px) {
+    .main {
+      grid-template-columns: 1fr 1fr 1fr;
+ 
+    }
+    header {
+      grid-column: span 3;
+    }
+    h1 {
+      grid-column: span 3;
+    }
+  }
+}
