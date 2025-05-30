@@ -1,5 +1,6 @@
 const allClickableKeys = "wasdjkl";
-const homeUrlo = "https://codedoa.github.io/agency-site/#footer";       // production
+const homeUrlo = "../../index.html"
+// const homeUrlo = "https://codedoa.github.io/agency-site/#footer";       // production
 // const homeUrlo = "http://127.0.0.1:3000/projects/bootstrap/#footer"; // localhost
 
 $(".homebutton").on("click", function() {
