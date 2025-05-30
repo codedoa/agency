@@ -33,7 +33,7 @@ body {
 }
 
 .startgame {
-  max-width: 90vmin;
+  max-width: 75vmin;
   background-image: url("./images/simon-game-card.png");
 }
 
