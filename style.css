@@ -220,7 +220,7 @@ footer p {
   }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 800px) {
   body {
     margin: 0;
     background: linear-gradient(180deg,
@@ -331,7 +331,8 @@ footer p {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 801px) {
+
   body {
     margin: 0;
     width: 100%;
@@ -396,7 +397,7 @@ footer p {
   }
 
   h2 {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
   }
 
   h2::after {
@@ -434,7 +435,7 @@ footer p {
       grid-column: span 3;
     }
     h2 {
-      font-size: 1.45rem;
+      font-size: 1.6rem;
     }
   }
 }
