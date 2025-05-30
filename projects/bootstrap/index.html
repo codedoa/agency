@@ -54,25 +54,25 @@
 
     }
     .epicfail {
-      background-image: url("images/epic-fail.jpg");
+      background-image: url("memes/epic-fail.jpg");
     }
     .iaminhell {
-      background-image: url("images/i-am-in-hell.jpg");
+      background-image: url("memes/i-am-in-hell.jpg");
     }
     .intheshower {
-      background-image: url("images/in-the-shower.jpg");
+      background-image: url("memes/in-the-shower.jpg");
     }
     .lifeuniverseall {
-      background-image: url("images/life-universe-everything.jpg");
+      background-image: url("memes/life-universe-everything.jpg");
     }
     .intheforest {
-      background-image: url("images/in-the-forest.jpg");
+      background-image: url("memes/in-the-forest.jpg");
     }
     .onanotherline {
-      background-image: url("images/on-the-other-line.jpg");
+      background-image: url("memes/on-the-other-line.jpg");
     }
     .plantoplan {
-      background-image: url("images/plan-to-plan.jpg");
+      background-image: url("memes/plan-to-plan.jpg");
     }
   </style>
 </head>
@@ -131,9 +131,9 @@
       </div>
     </div>
 
-    <div class="overflow-hidden" style="max-height: 65vh;">
+    <div class="overflow-hidden" style="max-height: 70vh;">
       <div class="container px-5">
-        <img src="./images/overpacked-truck.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" height="500" loading="lazy">
+        <img src="./images/truck-overloaded.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" loading="lazy">
       </div>
     </div>
   </div>
@@ -243,12 +243,12 @@
     <div class="col mb-3">
       <h5 id="goto">Go To</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Page Top</a></li>
         <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(1);">Hell</a></li>
         <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(2);">Shower</a></li>
         <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(3);">Find It</a></li>
         <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(4);">The Forest</a></li>
         <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(5);">Fishing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Page Top</a></li>
       </ul>
     </div>
 
@@ -256,8 +256,9 @@
   </footer>
 
   <script type="text/javascript">
-    const homeUrlo = "https://codedoa.github.io/agency-site/#footer";   // production
+//    const homeUrlo = "https://codedoa.github.io/agency-site/#footer";   // production
 //    const homeUrlo = "http://127.0.0.1:3000/#footer";                     // localhost
+    const homeUrlo = "../../index.html";
 
     function goHome() {
       window.location.href = homeUrlo;
