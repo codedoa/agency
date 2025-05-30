@@ -396,7 +396,7 @@ footer p {
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.35rem;
   }
 
   h2::after {
@@ -426,13 +426,15 @@ footer p {
   @media (min-width: 1200px) {
     .main {
       grid-template-columns: 1fr 1fr 1fr;
- 
     }
     header {
       grid-column: span 3;
     }
     h1 {
       grid-column: span 3;
+    }
+    h2 {
+      font-size: 1.45rem;
     }
   }
 }
