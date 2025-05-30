@@ -2,12 +2,12 @@ const buttonColors = ["red","blue","green","yellow"];
 var gamePattern = [];
 var clickedPattern = [];
 var currentLevel=0;
-const homeUrlo = "../../index.html";
-// const homeUrlo = "https://codedoa.github.io/agency-site/#footer";       // production
-// const homeUrlo = "http://127.0.0.1:3000/projects/bootstrap/#footer"; // localhost
+ const homeUrlo = "../../index.html";
+// const homeUrlo = "https://codedoa.github.io/agency-site/#footer";      // production
+// const homeUrlo = "http://127.0.0.1:3000/index.html#footer";   // localhost
 
 $(".homebutton").on("click", function() {
-  setTimeout(window.location.href = homeUrlo, 1500);
+  setTimeout(window.location.href = homeUrlo, 500);
 });
 
 $("#restart").on("click", function(event) {
