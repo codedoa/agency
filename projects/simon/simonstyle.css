@@ -1,7 +1,7 @@
 body {
   text-align: center;
   background-color: #011F3F;
-  min-width: 300px;
+  min-width: 370px;
 }
 
 .homebutton {
@@ -19,29 +19,34 @@ body {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 3%;
   color: #FEF2BF;
 }
 
 .container {
+  left: 0;
+  right: 0;
   display: block;
   margin: auto;
-  min-height: 575px;
-  background-size: 100%;
+  min-height: 30vh;
+  max-height: 50vh;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
+  max-width: fit-content;
 }
 
 .startgame {
-  max-width: 75vmin;
+  max-width: 80vmin;
   background-image: url("./images/simon-game-card.png");
 }
 
 .goodgame {
   max-width: 70vmin;
-  min-width: 50vmin;
+  min-width: 65min;
+  min-height: 70vmin;
   background-image: url("./images/capybara-cool.jpg");
-  background-position: center;
   background-size: 100%;
   border: 2px solid black;
   border-radius: 30%;
@@ -51,8 +56,8 @@ body {
 .endgame {
   max-width: 70vmin;
   min-width: 50vmin;
+  min-height: 70vmin;
   background-image: url("./images/squirrox.gif");
-  background-position: center;
   background-size: 100%;
   border: 2px solid black;
   border-radius: 30%;
@@ -103,13 +108,13 @@ body {
 }
 
 .btn {
-  margin: 25px;
+  margin: 10px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
+  height: 35vmin;
+  width: 35vmin;
+  border: 5px solid black;
   border-radius: 20%;
-  touch-action: manipulation;
+/*   touch-action: manipulation; */
 }
 
 .btnhdn {
