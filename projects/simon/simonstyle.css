@@ -40,7 +40,6 @@ body {
 .goodgame {
   max-width: 70vw;
   min-width: 50vw;
-  min-height: 50vmin;
   background-image: url("./images/capybara-cool.jpg");
   background-position: center;
   background-size: 100%;
@@ -110,7 +109,7 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
-  touch-action: manipulation; /* disable double tap zoom */
+/*  touch-action: manipulation; disable double tap zoom */
 }
 
 .btnhdn {
