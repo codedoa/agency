@@ -44,7 +44,6 @@ body {
 .goodgame {
   max-width: 70vw;
   min-width: 50vw;
-  min-height: 50vmin;
   background-image: url("./images/capybara-cool.jpg");
   background-position: center;
   background-size: 100%;
