@@ -1,8 +1,11 @@
+* {
+    touch-action: manipulation;  /* disable double tap zoom by CSS-only means */
+}
+
 body {
   text-align: center;
   background-color: #011F3F;
   min-width: 300px;
-  touch-action: manipulation;
 }
 
 .homebutton {
@@ -31,7 +34,6 @@ body {
   height: 575px;
   background-size: 100%;
   background-repeat: no-repeat;
-  touch-action: manipulation;
 }
 
 .startgame {
@@ -112,7 +114,6 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
-  touch-action: manipulation; /* disable double tap zoom */
 }
 
 .btnhdn {
