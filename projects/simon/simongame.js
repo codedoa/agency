@@ -18,7 +18,7 @@ $("#restart").on("click", function(event) {
 function endGame() {
   var audio = new Audio('./sounds/wrong.mp3');
   audio.play();
-  $("#level-title").text("Oooupsy... Level " + currentLevel + " was a bit too crunchy! Better Luck next time!");
+  $("#level-title").text("Ooupsey... Level " + (--currentLevel) + " was a bit too crunchy! Better Luck next time!");
   $(".container").addClass("endgame");
   $("body").addClass("game-over");
   $(".endgame").on("click", function() {

@@ -7,7 +7,8 @@ body {
 .homebutton {
   position: fixed;
   margin: 5px;
-  top: 62px;
+  bottom: 5px;
+  right: 5px;
   background-image: url("../../home-icon.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -74,8 +75,8 @@ footer {
 .drum {
   outline: none;
   display: inline-block;
-  min-height: 170px;
-  min-width: 170px;
+  min-height: 20vmin;
+  min-width: 20vmin;
   margin: 10px;
   border: 10px solid #404B69;
   border-radius: 15px;
@@ -83,7 +84,7 @@ footer {
   font-family: 'Arvo', cursive;
   font-weight: 900;
   font-size: 8rem;
-  text-align: center;
+  text-align: end;
   color: rgba(218,04,04,0.7);
   text-shadow: 3px 0 #DBEDF3;
   background-color: white;

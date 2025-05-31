@@ -1,3 +1,7 @@
+* {
+  touch-action: manipulation;
+}
+
 body {
   text-align: center;
   background-color: #011F3F;
@@ -7,7 +11,8 @@ body {
 .homebutton {
   position: fixed;
   margin: 5px;
-  top: 100px;
+  bottom: 2%;
+  right: 2%;
   background-image: url("../../home-icon.png");
   background-repeat: no-repeat;
   background-size: 100%;
