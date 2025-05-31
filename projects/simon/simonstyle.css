@@ -27,7 +27,7 @@ body {
 .container {
   display: block;
   margin: auto;
-  height: 575px;
+  min-height: 575px;
   background-size: 100%;
   background-repeat: no-repeat;
 }
