@@ -38,6 +38,8 @@ body {
 }
 
 .goodgame {
+  max-width: 70vmin;
+  min-width: 50vmin;
   max-width: 70vw;
   min-width: 50vw;
   background-image: url("./images/capybara-cool.jpg");
@@ -49,8 +51,8 @@ body {
 }
 
 .endgame {
-  max-width: 70vw;
-  min-width: 50vw;
+  max-width: 70vmin;
+  min-width: 50vmin;
   background-image: url("./images/squirrox.gif");
   background-position: center;
   background-size: 100%;
