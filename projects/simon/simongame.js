@@ -19,7 +19,7 @@ function endGame() {
   $("#level-title").text("Ooupsey... Level " + (--currentLevel) + " was a bit too crunchy! Better Luck next time!");
   $(".container").addClass("endgame");
   $("body").addClass("game-over");
-  $(".container")[0].scrollIntoView({ block: "end" });
+  $(".container")[0].scrollIntoView(false);
   $(".endgame").on("click", function() {
     $("#restart").click();
   })
@@ -27,7 +27,7 @@ function endGame() {
 
 function nextSequence() {
   let randomNumber = Math.floor(Math.random()*4);
-  $(".container")[0].scrollIntoView({ block: "end" });
+  $(".container")[0].scrollIntoView(false);
   livenButton(buttonColors[randomNumber]);
   gamePattern.push(buttonColors[randomNumber]);
   currentLevel++;
