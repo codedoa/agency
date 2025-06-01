@@ -5,14 +5,13 @@
 body {
   text-align: center;
   background-color: #283149;
-  min-width: 630px;
 }
 
 .homebutton {
   position: fixed;
   margin: 5px;
-  bottom: 5px;
-  right: 5px;
+  bottom: 2%;
+  right: 2%;
   background-image: url("../../home-icon.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -23,13 +22,15 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
+  margin: 4vmin auto;
+  font-size: 3rem;
   color: #DBEDF3;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
 }
 
 footer {
+  margin: 5vmin auto;
   color: #DBEDF3;
   font-family: sans-serif;
 }
@@ -51,7 +52,6 @@ footer {
 }
 
 .j {
-
   background-image: url("./images/snare.png");
 }
 
@@ -64,7 +64,8 @@ footer {
 }
 
 .set {
-  margin: 10% auto;
+  margin: 1% auto;
+  padding: 0vmin;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -79,17 +80,17 @@ footer {
 .drum {
   outline: none;
   display: inline-block;
-  min-height: 20vmin;
-  min-width: 20vmin;
-  margin: 10px;
-  border: 10px solid #404B69;
+  height: 30vmin;
+  width: 30vmin;
+  margin: -4px;
+  border: 3px solid #404B69;
   border-radius: 15px;
   line-height: 1;
   font-family: 'Arvo', cursive;
   font-weight: 900;
-  font-size: 8rem;
-  text-align: end;
-  color: rgba(218,04,04,0.7);
+  font-size: 6rem;
+  text-align: center;
+  color: rgba(218,04,04,0.5);
   text-shadow: 3px 0 #DBEDF3;
   background-color: white;
   background-size: contain;

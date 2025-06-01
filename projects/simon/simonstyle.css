@@ -24,7 +24,7 @@ body {
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 3%;
   color: #FEF2BF;
 }
@@ -74,14 +74,14 @@ body {
   width: 100%;
   background-color: inherit;
   font-family: 'Press Start 2P', strong;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #FEF2BF;
   text-transform: uppercase;
   text-shadow: 3px 3px 3px green;
 }
 
 #start:before {
-  font-size: 3rem;
+  font-size: 2rem;
   content: '\261e';
   padding-right: 12px;
   color: green;
@@ -89,7 +89,7 @@ body {
 }
 
 #start:after {
-  font-size: 3rem;
+  font-size: 2rem;
   content: '\261c';
   padding-left: 3px;
   color: green;
@@ -97,26 +97,26 @@ body {
 }
 
 #restart:before {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   content: '\267d';
   padding-right: 12px;
   opacity: 0.6;
 }
 
 #restart:after {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2rem;
   content: '\267d';
   padding-left: 3px;
   opacity: 0.6;
 }
 
 .btn {
-  margin: 10px;
+  margin: 0vmin;
   display: inline-block;
-  height: 35vmin;
-  width: 35vmin;
+  height: 30vmin;
+  width: 30vmin;
   border: 5px solid black;
   border-radius: 20%;
 /*   touch-action: manipulation; */

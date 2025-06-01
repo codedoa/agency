@@ -220,7 +220,7 @@ footer p {
   }
 }
 
-@media (min-width: 577px) and (max-width: 800px) {
+@media (min-width: 577px) and (max-width: 820px) {
   body {
     margin: 0;
     background: linear-gradient(180deg,
@@ -331,7 +331,7 @@ footer p {
   }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 821px) {
 
   body {
     margin: 0;
