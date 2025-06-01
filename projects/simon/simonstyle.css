@@ -48,9 +48,8 @@ body {
 }
 
 .goodgame {
-  max-width: 70vmin;
-  min-width: 65min;
-  min-height: 70vmin;
+  max-width: 65vmin;
+  min-height: 65vmin;
   background-image: url("./images/capybara-cool.jpg");
   background-size: 100%;
   border: 2px solid black;
@@ -59,9 +58,8 @@ body {
 }
 
 .endgame {
-  max-width: 70vmin;
-  min-width: 50vmin;
-  min-height: 70vmin;
+  max-width: 60vmin;
+  min-height: 60vmin;
   background-image: url("./images/squirrox.gif");
   background-size: 100%;
   border: 2px solid black;
@@ -119,7 +117,6 @@ body {
   width: 30vmin;
   border: 5px solid black;
   border-radius: 20%;
-/*   touch-action: manipulation; */
 }
 
 .btnhdn {

@@ -2,9 +2,7 @@ const buttonColors = ["red","blue","green","yellow"];
 var gamePattern = [];
 var clickedPattern = [];
 var currentLevel=0;
- const homeUrlo = "../../index.html";
-// const homeUrlo = "https://codedoa.github.io/agency-site/#footer";      // production
-// const homeUrlo = "http://127.0.0.1:3000/index.html#footer";   // localhost
+const homeUrlo = "../../index.html";
 
 $(".homebutton").on("click", function() {
   setTimeout(window.location.href = homeUrlo, 500);
@@ -21,6 +19,7 @@ function endGame() {
   $("#level-title").text("Ooupsey... Level " + (--currentLevel) + " was a bit too crunchy! Better Luck next time!");
   $(".container").addClass("endgame");
   $("body").addClass("game-over");
+  $(".container")[0].scrollIntoView({ block: "end" });
   $(".endgame").on("click", function() {
     $("#restart").click();
   })
@@ -28,6 +27,7 @@ function endGame() {
 
 function nextSequence() {
   let randomNumber = Math.floor(Math.random()*4);
+  $(".container")[0].scrollIntoView({ block: "end" });
   livenButton(buttonColors[randomNumber]);
   gamePattern.push(buttonColors[randomNumber]);
   currentLevel++;
