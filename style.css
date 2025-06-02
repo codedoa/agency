@@ -10,7 +10,7 @@ body {
   );
 }
 
-/* a:link { 
+a:link { 
   color: inherit; 
   text-decoration: none; 
 } 
@@ -25,7 +25,7 @@ a:hover {
 a:active { 
   color: inherit; 
   text-decoration: none; 
-} */
+}
 
 .main {
   display: flex;
@@ -76,7 +76,7 @@ h1 {
   color: midnightblue;  
 }
 
-.bb::after {
+.bb:after {
   content: "!";
 }
 
@@ -112,6 +112,7 @@ footer p {
   color: midnightblue;
   font-size: 1.1rem;
 }
+
 
 .drumkit-components {
   padding: 0 20px;
@@ -200,12 +201,12 @@ footer p {
     font-size: 2rem;
   }
 
-  h2::before {
+  h2:before {
     padding-right: 10px;
     content: '\294F';
   }
 
-  h2::after {
+  h2:after {
     padding-left: 10px;
     content: '\2951';
   }
@@ -230,7 +231,7 @@ footer p {
     p {
       padding: 5px 0px 0px 0px;
     }
-    p::before {
+    p:before {
       content: url('./favicon.png');
       padding-right: 10px;
     }
@@ -249,6 +250,11 @@ footer p {
     }
     footer {
       margin-right: 15px;
+      p:before {
+        content: url('./favicon.png');
+        padding-right: 10px;
+        vertical-align: middle;
+      }
     }
   }
 
@@ -306,7 +312,7 @@ footer p {
     font-size: 1.5rem;
   }
 
-  h2::after {
+  h2:after {
     content: '\269f';
     padding-left: 10px; 
   }
@@ -327,7 +333,7 @@ footer p {
       border-color: #7FB77E;
       border-radius: 0;
     }
-    p::before {
+    p:before {
       content: '\274f';
       padding-right: 10px;
     }
@@ -338,11 +344,11 @@ footer p {
     h2 {
       text-align: right;
     }
-    h2::before {
+    h2:before {
       content: '\269e';
       padding-right: 10px; 
     }
-    h2::after {
+    h2:after {
       content: none;
     }
   }
@@ -409,7 +415,7 @@ footer p {
     text-decoration-line: overline;
   }
 
-  h1::after {
+  h1:after {
     content: '\00a0\2710\00a0';
   }
 
@@ -417,7 +423,7 @@ footer p {
     font-size: 1.4rem;
   }
 
-  h2::after {
+  h2:after {
     content: '\2767';
     padding-left: 10px; 
   }
@@ -439,6 +445,11 @@ footer p {
 
   footer {
     margin-right: 10px;
+    p:before {
+      content: url('./favicon.png');
+      padding-right: 10px;
+      vertical-align: middle;
+    }
   }
 
   @media (min-width: 1200px) {
