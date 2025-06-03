@@ -44,18 +44,18 @@ body {
 }
 .modal-content {
   margin: 3% auto; /* 3% from the top and centered */
-  padding: 2% 5%;
+  padding: 3vmin 4vmin;
 /*  max-width: vmin(400px,90vw); /* Could be more or less, depending on screen size */
   width: 75vmin;
   height: 75vmin;
-  background-color: rgb(182,226,162);; /* content fallback background */
+  background-color: rgb(182,226,162); /* content fallback background */
   background-size: 100%;
   background-repeat: no-repeat;
   font-family: 'Press Start 2P', cursive;
   font-size: 3vmin;
   line-height: 5vmin;
   text-align: justify;
-  border: 3px solid rgb(248, 122, 88);
+  border: 5px solid rgb(248, 122, 88);
   border-radius: 15%;
 }
 .modal-visible {
@@ -64,13 +64,17 @@ body {
 /* The Info Close Button */
 .close {
   float: right;
-  font-size: 10vmin;
+  color: rgb(248, 122, 88);
+  text-shadow: 5px 5px 10px black;
+  margin-right: -7.5vmin;
+  margin-top: 3vmin;
+  font-size: 13vmin;
   font-weight: bold;
+  text-decoration: solid;
 }
-
 .close:hover,
 .close:focus {
-  color: black;
+  color: rgb(248, 122, 88);
   text-decoration: none;
   cursor: pointer;
 }

@@ -13,8 +13,7 @@ $(".info").on("click", function () {
 });
 
 $(window).on("click", function(event) {
-  if (event.target == $("#myModal")[0]) {
-  console.log("close triggered");
+  if (event.target === $("#myModal")[0]) {
     $("#myModal")[0].style.display = "none";
   }
 });
