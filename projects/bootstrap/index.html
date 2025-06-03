@@ -17,18 +17,21 @@
     .carouselitem img {
       object-fit: contain;
     }
-    .homebutton {
+    .navbutton {
       position: fixed;
       margin: 5px;
-      bottom: 2%;
-      right: 2%;
-      background-image: url("../../home-icon.png");
+      bottom: 7vmin;
       background-repeat: no-repeat;
       background-size: 100%;
       width: 75px;
       height: 75px;
       opacity: 0.5;
       z-index: 100001;
+    }
+    .home {
+      right: 2%;
+      left: unset;
+      background-image: url("../../home-button.png");
     }
     .modal {
       display: none; /* Hidden by default */
@@ -87,7 +90,7 @@
 </head>
 
 <body>
-  <div class="homebutton" id="homebutton" onclick="goHome();"></div>
+  <div class="navbutton home" id="homebutton" onclick="goHome();"></div>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="./svg/truck.svg" alt="truck brand icon" /> Booty Mov<s><em>ass</em></s><sub>ers</sub></a>
@@ -230,34 +233,34 @@
     <div class="col mb-3">
       <h5 id="compete">Our Competitors</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#compete" class="nav-link pl-1 text-body-secondary" onclick="showModal(6);">Un</a></li>
-        <li class="nav-item mb-2"><a href="#compete" class="nav-link pl-1 text-body-secondary" onclick="showModal(6);">Deux</a></li>
-        <li class="nav-item mb-2"><a href="#compete" class="nav-link pl-1 text-body-secondary" onclick="showModal(6);">Trois</a></li>
-        <li class="nav-item mb-2"><a href="#compete" class="nav-link pl-1 text-body-secondary" onclick="showModal(6);">Quatre</a></li>
-        <li class="nav-item mb-2"><a href="#compete" class="nav-link pl-1 text-body-secondary" onclick="showModal(6);">Cinq</a></li>
+        <li class="nav-item mb-2"><a href="#compete" class="nav-link p-1 text-body-secondary" onclick="showModal(6);">Un</a></li>
+        <li class="nav-item mb-2"><a href="#compete" class="nav-link p-1 text-body-secondary" onclick="showModal(6);">Deux</a></li>
+        <li class="nav-item mb-2"><a href="#compete" class="nav-link p-1 text-body-secondary" onclick="showModal(6);">Trois</a></li>
+        <li class="nav-item mb-2"><a href="#compete" class="nav-link p-1 text-body-secondary" onclick="showModal(6);">Quatre</a></li>
+        <li class="nav-item mb-2"><a href="#compete" class="nav-link p-1 text-body-secondary" onclick="showModal(6);">Cinq</a></li>
       </ul>
     </div>
 
     <div class="col mb-3">
       <h5 id="plan">Improvement Plan</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#plan" class="nav-link pl-1 text-body-secondary" onclick="showModal(0);">You've</a></li>
-        <li class="nav-item mb-2"><a href="#plan" class="nav-link pl-1 text-body-secondary" onclick="showModal(0);">gotta</a></li>
-        <li class="nav-item mb-2"><a href="#plan" class="nav-link pl-1 text-body-secondary" onclick="showModal(0);">be</a></li>
-        <li class="nav-item mb-2"><a href="#plan" class="nav-link pl-1 text-body-secondary" onclick="showModal(0);">kidding</a></li>
-        <li class="nav-item mb-2"><a href="#plan" class="nav-link pl-1 text-body-secondary" onclick="showModal(0);">me!</a></li>
+        <li class="nav-item mb-2"><a href="#plan" class="nav-link p-1 text-body-secondary" onclick="showModal(0);">You've</a></li>
+        <li class="nav-item mb-2"><a href="#plan" class="nav-link p-1 text-body-secondary" onclick="showModal(0);">gotta</a></li>
+        <li class="nav-item mb-2"><a href="#plan" class="nav-link p-1 text-body-secondary" onclick="showModal(0);">be</a></li>
+        <li class="nav-item mb-2"><a href="#plan" class="nav-link p-1 text-body-secondary" onclick="showModal(0);">kidding</a></li>
+        <li class="nav-item mb-2"><a href="#plan" class="nav-link p-1 text-body-secondary" onclick="showModal(0);">me!</a></li>
       </ul>
     </div>
 
     <div class="col mb-3">
       <h5 id="goto">Go To</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(1);">Hell</a></li>
-        <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(2);">Shower</a></li>
-        <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(3);">Find It</a></li>
-        <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(4);">The Forest</a></li>
-        <li class="nav-item mb-2"><a href="#goto" class="nav-link pl-1 text-body-secondary" onclick="showModal(5);">Fishing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Page Top</a></li>
+        <li class="nav-item mb-2"><a href="#goto" class="nav-link p-1 text-body-secondary" onclick="showModal(1);">Hell</a></li>
+        <li class="nav-item mb-2"><a href="#goto" class="nav-link p-1 text-body-secondary" onclick="showModal(2);">Shower</a></li>
+        <li class="nav-item mb-2"><a href="#goto" class="nav-link p-1 text-body-secondary" onclick="showModal(3);">Find It</a></li>
+        <li class="nav-item mb-2"><a href="#goto" class="nav-link p-1 text-body-secondary" onclick="showModal(4);">The Forest</a></li>
+        <li class="nav-item mb-2"><a href="#goto" class="nav-link p-1 text-body-secondary" onclick="showModal(5);">Fishing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-1 text-body-secondary">Page Top</a></li>
       </ul>
     </div>
 

@@ -4,8 +4,19 @@ var clickedPattern = [];
 var currentLevel=0;
 const homeUrlo = "../../index.html";
 
-$(".homebutton").on("click", function() {
+$(".home").on("click", function() {
   setTimeout(window.location.href = homeUrlo, 500);
+});
+
+$(".info").on("click", function () {
+  console.log("info clicked");
+  $("#myModal")[0].style.display = "block";
+});
+
+$(window).on("click", function(event) {
+  if (event.target == $("#myModal")[0]) {
+    $("#myModal")[0].style.display = "none";
+  }
 });
 
 $("#restart").on("click", function(event) {
