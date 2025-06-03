@@ -9,14 +9,18 @@ $(".home").on("click", function() {
 });
 
 $(".info").on("click", function () {
-  console.log("info clicked");
   $("#myModal")[0].style.display = "block";
 });
 
 $(window).on("click", function(event) {
   if (event.target == $("#myModal")[0]) {
+  console.log("close triggered");
     $("#myModal")[0].style.display = "none";
   }
+});
+
+$("#close").on("click", function () {
+  $("#myModal")[0].style.display = "none";
 });
 
 $("#restart").on("click", function(event) {
