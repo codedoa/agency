@@ -16,7 +16,7 @@
 }
 
 .container {
-  width: 70vw;
+  width: 90vw;
   margin: auto;
   text-align: center;
 }
@@ -24,36 +24,39 @@
 .dice {
   text-align: center;
   display: inline-block;
+  margin: 1px auto;
 }
 
 body {
   background-color: #393E46;
+  font-family: 'Lobster', cursive;
 }
 
 h1 {
-  margin: 5px;
+  margin: 4vmin;
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
-  font-size: 1.8rem;
+  font-size: 7vmin;
   color: #4ECCA3;
 }
 
 p {
-  font-size: 2rem;
+  font-size: 8vmin;
   color: #4ECCA3;
   font-family: 'Indie Flower', cursive;
-  margin: 10px auto;
+  margin: 5px auto 1px auto;
 }
 
 img {
   width: 35vmin;
-  margin: 5vmin;
+  margin: 2vmin;
 }
 
 footer {
   margin-top: 5vmin;
-  margin-bottom: 2vmin;
+  margin-bottom: 1vmin;
   color: #EEEEEE;
   text-align: center;
   font-family: 'Indie Flower', cursive;
+  font-size: 1.8rem;
 }

@@ -91,8 +91,8 @@ body {
   right: 0;
   display: block;
   margin: auto;
-  min-height: 30vh;
-  max-height: 50vh;
+  min-height: 50vh;
+  max-height: 80vh;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -100,7 +100,7 @@ body {
 }
 
 .startgame {
-  max-width: 80vmin;
+  max-width: 90vmin;
   background-image: url("./images/simon-game-card.png");
 }
 

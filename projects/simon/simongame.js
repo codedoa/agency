@@ -9,17 +9,20 @@ $(".home").on("click", function() {
 });
 
 $(".info").on("click", function () {
-  $("#myModal")[0].style.display = "block";
+//  $("#myModal")[0].style.display = "block";
+  $("#myModal").addClass("modal-visible");
 });
 
 $(window).on("click", function(event) {
   if (event.target === $("#myModal")[0]) {
-    $("#myModal")[0].style.display = "none";
-  }
+//    $("#myModal")[0].style.display = "none";
+    $("#myModal").removeClass("modal-visible");
+}
 });
 
 $("#close").on("click", function () {
-  $("#myModal")[0].style.display = "none";
+//  $("#myModal")[0].style.display = "none";
+  $("#myModal").removeClass("modal-visible");
 });
 
 $("#restart").on("click", function(event) {
