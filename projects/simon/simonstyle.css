@@ -29,6 +29,17 @@ body {
   left: 2%;
   background-image: url("../../info-button.png");
 }
+.mutetoggle {
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-bottom: 5px;
+  background-image: url("../../unmuted-button.png")
+}
+.muted {
+  background-image: url("../../muted-button.png");
+}
 
 .modal {
   display: none; /* Hidden by default */
@@ -101,6 +112,7 @@ body {
 
 .startgame {
   max-width: 90vmin;
+  max-height: 60vmin;
   background-image: url("./images/simon-game-card.png");
 }
 

@@ -2,6 +2,7 @@ const buttonColors = ["red","blue","green","yellow"];
 var gamePattern = [];
 var clickedPattern = [];
 var currentLevel=0;
+var muted = true;
 const homeUrlo = "../../index.html";
 
 $(".home").on("click", function() {
@@ -9,34 +10,59 @@ $(".home").on("click", function() {
 });
 
 $(".info").on("click", function () {
-//  $("#myModal")[0].style.display = "block";
   $("#myModal").addClass("modal-visible");
 });
 
-$(window).on("click", function(event) {
+/* $(window).on("click", function(event) {
   if (event.target === $("#myModal")[0]) {
 //    $("#myModal")[0].style.display = "none";
     $("#myModal").removeClass("modal-visible");
 }
-});
+}); */
 
 $("#close").on("click", function () {
-//  $("#myModal")[0].style.display = "none";
   $("#myModal").removeClass("modal-visible");
 });
+
+$(".mutetoggle").on("click", function () {
+  $(this).toggleClass("muted");
+  muted = !muted;
+});
+
+// This is the original hard restart with full page reload.
 
 $("#restart").on("click", function(event) {
   event.preventDefault();
   location.reload();
-});
+}); 
 
+/* 
+$("#restart").on("click", function(event) {
+  gamePattern.length = 0;
+  clickedPattern.length = 0;
+  currentLevel = 0;
+  $("#level-title").text("Click Start to Begin");
+  $(".container").removeClass("endgame").addClass("startgame");
+  $("body").removeClass("game-over");
+  $("#start").removeClass("btnhdn");
+  $("#restart").addClass("btnhdn");
+  $(".btn").addClass("btnhdn");
+  $(".startgame").on("click", function() {
+    $("#start").click();
+  })
+//  nextSequence();
+});
+ */
 function endGame() {
   var audio = new Audio('./sounds/wrong.mp3');
-  audio.play();
+  if(!muted) { 
+    audio.play(); 
+  }
   $("#level-title").text("Ooupsey... Level " + currentLevel + " was a bit too crunchy! Better Luck next time!");
   $(".container").addClass("endgame");
   $("body").addClass("game-over");
-  $(".container")[0].scrollIntoView(false);
+//  $("#restart").text("try again");
+//  $(".container")[0].scrollIntoView(false);
   $(".endgame").on("click", function() {
     $("#restart").click();
   })
@@ -44,7 +70,7 @@ function endGame() {
 
 function nextSequence() {
   let randomNumber = Math.floor(Math.random()*4);
-  $(".container")[0].scrollIntoView(false);
+//  $(".container")[0].scrollIntoView(false);
   livenButton(buttonColors[randomNumber]);
   gamePattern.push(buttonColors[randomNumber]);
   currentLevel++;
@@ -73,7 +99,10 @@ function livenButton(color) {
     default:
       return;
   }
-  audio.play();
+  if(!muted) { 
+    console.log("LivenButton: " + muted);
+    audio.play(); 
+  }
 }
   
 function iClick(currentColor) {
