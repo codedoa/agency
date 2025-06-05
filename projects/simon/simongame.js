@@ -1,81 +1,91 @@
 const buttonColors = ["red","blue","green","yellow"];
+const homeUrlo = "../../index.html";
 var gamePattern = [];
 var clickedPattern = [];
 var currentLevel=0;
-var muted = true;
-const homeUrlo = "../../index.html";
+var muted=true;
+
+$(document).ready(function() {
+  initializeMutedState();
+});
+
+function initializeMutedState() {
+  if (typeof sessionStorage.getItem('sessionmuted') !== 'undefined' && sessionStorage.getItem('sessionmuted') === 'no') {
+    muted = false;
+    $(".mutetoggle").attr("class", "navbutton mutetoggle");
+  } else {
+    muted = true;
+    $('.mutetoggle').attr("class","navbutton mutetoggle muted");
+  }
+}
 
 $(".home").on("click", function() {
   setTimeout(window.location.href = homeUrlo, 500);
 });
 
 $(".info").on("click", function () {
-  $("#myModal").addClass("modal-visible");
+  $("#modalWindow").addClass("modal-visible");
 });
-
-/* $(window).on("click", function(event) {
-  if (event.target === $("#myModal")[0]) {
-//    $("#myModal")[0].style.display = "none";
-    $("#myModal").removeClass("modal-visible");
-}
-}); */
-
-$("#close").on("click", function () {
-  $("#myModal").removeClass("modal-visible");
+$("#closeModal").on("click", function () {
+  $("#modalWindow").removeClass("modal-visible");
 });
+/*
+$(window).on("click", function(event) {
+  if (event.target === $("#modalWindow")) { 
+    $("#modalWindow").removeClass("modal-visible"); 
+  }
+});
+*/
 
 $(".mutetoggle").on("click", function () {
-  $(this).toggleClass("muted");
   muted = !muted;
+  if(muted) {
+    $(".mutetoggle").attr("class","navbutton mutetoggle muted");
+    sessionStorage.setItem('sessionmuted', 'yes');
+  } else {
+    $(".mutetoggle").attr("class","navbutton mutetoggle");
+    sessionStorage.setItem('sessionmuted', 'no');
+  }
 });
 
 // This is the original hard restart with full page reload.
-
 $("#restart").on("click", function(event) {
   event.preventDefault();
   location.reload();
-}); 
-
-/* 
-$("#restart").on("click", function(event) {
-  gamePattern.length = 0;
-  clickedPattern.length = 0;
-  currentLevel = 0;
-  $("#level-title").text("Click Start to Begin");
-  $(".container").removeClass("endgame").addClass("startgame");
-  $("body").removeClass("game-over");
-  $("#start").removeClass("btnhdn");
-  $("#restart").addClass("btnhdn");
-  $(".btn").addClass("btnhdn");
-  $(".startgame").on("click", function() {
-    $("#start").click();
-  })
-//  nextSequence();
 });
- */
-function endGame() {
-  var audio = new Audio('./sounds/wrong.mp3');
-  if(!muted) { 
-    audio.play(); 
-  }
-  $("#level-title").text("Ooupsey... Level " + currentLevel + " was a bit too crunchy! Better Luck next time!");
-  $(".container").addClass("endgame");
-  $("body").addClass("game-over");
-//  $("#restart").text("try again");
-//  $(".container")[0].scrollIntoView(false);
-  $(".endgame").on("click", function() {
-    $("#restart").click();
+
+$(".btn").each(function() {
+  $(this).on("click", function() {
+    iClick($(this).attr("id"));
   })
-}
+});
+
+$("#start").on("click", function () {
+  $(this).addClass("btnhdn");
+  $("#restart").removeClass("btnhdn");
+  $(".btn").removeClass("btnhdn");
+  $(".container").removeClass("startgame");
+  if(gamePattern.length === 0) {
+    nextSequence();
+  }
+});
+
+$(".startgame").on("click", function() {
+  $("#start").click();
+});
 
 function nextSequence() {
   let randomNumber = Math.floor(Math.random()*4);
-//  $(".container")[0].scrollIntoView(false);
   livenButton(buttonColors[randomNumber]);
   gamePattern.push(buttonColors[randomNumber]);
   currentLevel++;
   $("#level-title").text("Level " + currentLevel);
-  return;
+}
+
+function iClick(currentColor) {
+  livenButton(currentColor);
+  clickedPattern.push(currentColor);
+  checkAnswer(clickedPattern.length);
 }
 
 function livenButton(color) {
@@ -100,15 +110,8 @@ function livenButton(color) {
       return;
   }
   if(!muted) { 
-    console.log("LivenButton: " + muted);
     audio.play(); 
   }
-}
-  
-function iClick(currentColor) {
-  livenButton(currentColor);
-  clickedPattern.push(currentColor);
-  checkAnswer(clickedPattern.length);
 }
 
 function checkAnswer(currentLevel) {
@@ -135,22 +138,17 @@ function checkAnswer(currentLevel) {
   }
 }
 
-$(".btn").each(function() {
-  $(this).on("click", function() {
-    iClick($(this).attr("id"));
-  })
-});
-
-$("#start").on("click", function () {
-  $(this).addClass("btnhdn");
-  $("#restart").removeClass("btnhdn");
-  $(".btn").removeClass("btnhdn");
-  $(".container").removeClass("startgame");
-  if(clickedPattern.length === gamePattern.length) {
-    nextSequence();
+function endGame() {
+  var audio = new Audio('./sounds/wrong.mp3');
+  if(!muted) { 
+    audio.play(); 
   }
-});
-
-$(".startgame").on("click", function() {
-  $("#start").click();
-})
+  $("#level-title").text("Ooupsey... Level " + currentLevel + " was a bit too crunchy! Better Luck next time!");
+  $(".container").addClass("endgame");
+  $("body").addClass("game-over");
+  $("#restart").text("try again");
+  $(".container")[0].scrollIntoView(false);
+  $(".endgame").on("click", function() {
+    $("#restart").click();
+  })
+}
