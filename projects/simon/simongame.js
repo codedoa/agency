@@ -50,6 +50,7 @@ $(".mutetoggle").on("click", function () {
 
 // This is the original hard restart with full page reload.
 $("#restart").on("click", function(event) {
+  $(".container").addClass("btnhdn");
   event.preventDefault();
   location.reload();
 });
